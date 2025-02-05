@@ -1,0 +1,41 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+default_platform(:ios)
+
+platform :ios do
+  desc "Run tests"
+  lane :tests do
+    run_tests(
+      scheme: "Hi5",
+      device: "iPhone 14"
+    )
+  end
+
+  desc "Build and archive app"
+  lane :build do
+    build_ios_app(
+      scheme: "Hi5",
+      export_method: "development",
+      configuration: "Debug",
+      clean: true
+    )
+  end
+
+  desc "Build and upload to TestFlight"
+  lane :beta do
+    # Increment build number
+    increment_build_number
+
+    # Build your app
+    build_ios_app(
+      scheme: "Hi5",
+      export_method: "app-store",
+      configuration: "Release"
+    )
+
+    # Upload to TestFlight
+    upload_to_testflight(
+      skip_waiting_for_build_processing: true
+    )
+  end
+end

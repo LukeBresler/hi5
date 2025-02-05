@@ -14,6 +14,15 @@
 		CF45633B2CA576EC0099C9A7 /* Hi5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF45633A2CA576EC0099C9A7 /* Hi5Tests.swift */; };
 		CF4563452CA576EC0099C9A7 /* Hi5UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4563442CA576EC0099C9A7 /* Hi5UITests.swift */; };
 		CF4563472CA576EC0099C9A7 /* Hi5UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4563462CA576EC0099C9A7 /* Hi5UITestsLaunchTests.swift */; };
+		CF4563542CA577240099C9A7 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4563532CA577240099C9A7 /* CreateAccountView.swift */; };
+		CF4563562CA577360099C9A7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4563552CA577360099C9A7 /* LoginView.swift */; };
+		CF4563582CA577450099C9A7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4563572CA577450099C9A7 /* HomeView.swift */; };
+		CF45635A2CA577560099C9A7 /* DeleteAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4563592CA577560099C9A7 /* DeleteAccountView.swift */; };
+		CF45635D2CA577810099C9A7 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF45635C2CA577810099C9A7 /* AuthViewModel.swift */; };
+		CF4563632CA579DE0099C9A7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CF4563622CA579DE0099C9A7 /* FirebaseAnalytics */; };
+		CF4563652CA579DE0099C9A7 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = CF4563642CA579DE0099C9A7 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		CF4563672CA579DE0099C9A7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CF4563662CA579DE0099C9A7 /* FirebaseAuth */; };
+		CF4563692CA57DD00099C9A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF4563682CA57DD00099C9A7 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +53,12 @@
 		CF4563402CA576EC0099C9A7 /* Hi5UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Hi5UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF4563442CA576EC0099C9A7 /* Hi5UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hi5UITests.swift; sourceTree = "<group>"; };
 		CF4563462CA576EC0099C9A7 /* Hi5UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hi5UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CF4563532CA577240099C9A7 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
+		CF4563552CA577360099C9A7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CF4563572CA577450099C9A7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CF4563592CA577560099C9A7 /* DeleteAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountView.swift; sourceTree = "<group>"; };
+		CF45635C2CA577810099C9A7 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		CF4563682CA57DD00099C9A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +66,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF4563632CA579DE0099C9A7 /* FirebaseAnalytics in Frameworks */,
+				CF4563672CA579DE0099C9A7 /* FirebaseAuth in Frameworks */,
+				CF4563652CA579DE0099C9A7 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +112,10 @@
 		CF4563282CA576EA0099C9A7 /* Hi5 */ = {
 			isa = PBXGroup;
 			children = (
+				CF4563682CA57DD00099C9A7 /* GoogleService-Info.plist */,
 				CF4563292CA576EA0099C9A7 /* Hi5App.swift */,
-				CF45632B2CA576EA0099C9A7 /* ContentView.swift */,
+				CF45635B2CA577600099C9A7 /* Views */,
+				CF45635E2CA577860099C9A7 /* View Models */,
 				CF45632D2CA576EB0099C9A7 /* Assets.xcassets */,
 				CF45632F2CA576EB0099C9A7 /* Preview Content */,
 			);
@@ -127,6 +147,26 @@
 			path = Hi5UITests;
 			sourceTree = "<group>";
 		};
+		CF45635B2CA577600099C9A7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CF45632B2CA576EA0099C9A7 /* ContentView.swift */,
+				CF4563532CA577240099C9A7 /* CreateAccountView.swift */,
+				CF4563552CA577360099C9A7 /* LoginView.swift */,
+				CF4563572CA577450099C9A7 /* HomeView.swift */,
+				CF4563592CA577560099C9A7 /* DeleteAccountView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CF45635E2CA577860099C9A7 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				CF45635C2CA577810099C9A7 /* AuthViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +183,11 @@
 			dependencies = (
 			);
 			name = Hi5;
+			packageProductDependencies = (
+				CF4563622CA579DE0099C9A7 /* FirebaseAnalytics */,
+				CF4563642CA579DE0099C9A7 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				CF4563662CA579DE0099C9A7 /* FirebaseAuth */,
+			);
 			productName = Hi5;
 			productReference = CF4563262CA576EA0099C9A7 /* Hi5.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +260,9 @@
 				Base,
 			);
 			mainGroup = CF45631D2CA576EA0099C9A7;
+			packageReferences = (
+				CF4563612CA579DE0099C9A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = CF4563272CA576EA0099C9A7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF4563312CA576EB0099C9A7 /* Preview Assets.xcassets in Resources */,
+				CF4563692CA57DD00099C9A7 /* GoogleService-Info.plist in Resources */,
 				CF45632E2CA576EB0099C9A7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,8 +306,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF4563542CA577240099C9A7 /* CreateAccountView.swift in Sources */,
 				CF45632C2CA576EA0099C9A7 /* ContentView.swift in Sources */,
+				CF4563562CA577360099C9A7 /* LoginView.swift in Sources */,
+				CF45635D2CA577810099C9A7 /* AuthViewModel.swift in Sources */,
+				CF4563582CA577450099C9A7 /* HomeView.swift in Sources */,
 				CF45632A2CA576EA0099C9A7 /* Hi5App.swift in Sources */,
+				CF45635A2CA577560099C9A7 /* DeleteAccountView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,17 +479,19 @@
 				DEVELOPMENT_TEAM = 87V44QNLW8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Hi5;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = co.za.realpixel.braveryapp.Hi5;
+				PRODUCT_BUNDLE_IDENTIFIER = co.za.realpixel.Hi5app.Hi5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -454,17 +510,19 @@
 				DEVELOPMENT_TEAM = 87V44QNLW8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Hi5;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = co.za.realpixel.braveryapp.Hi5;
+				PRODUCT_BUNDLE_IDENTIFIER = co.za.realpixel.Hi5app.Hi5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -588,6 +646,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CF4563612CA579DE0099C9A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CF4563622CA579DE0099C9A7 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF4563612CA579DE0099C9A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		CF4563642CA579DE0099C9A7 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF4563612CA579DE0099C9A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		CF4563662CA579DE0099C9A7 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF4563612CA579DE0099C9A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CF45631E2CA576EA0099C9A7 /* Project object */;
 }
