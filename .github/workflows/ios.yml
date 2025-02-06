@@ -32,7 +32,7 @@ jobs:
         bundle install
     
     - name: Run tests
-      run: bundle exec fastlane tests
+      run: fastlane tests
     
     - name: Build app
       run: fastlane build
